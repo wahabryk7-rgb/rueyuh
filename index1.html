@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Wahab — student, web designer and future developer from Kot Samaba, Pakistan.">
+<title>Wahab — Creative Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#100d0e;--panel:#171314;--panel2:#21191a;--cream:#ead8ca;--muted:#b6a49c;--rose:#bd6879;--line:#493338;--white:#f8eee8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 42px));margin:auto}
+header{height:65px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:10px;letter-spacing:1.3px;text-transform:uppercase}
+nav{display:flex;gap:22px}nav a:hover,.contact a:hover{color:var(--cream)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#4b242d 0,#281619 38%,#100d0e 75%);border-bottom:1px solid var(--line);padding-bottom:35px}
+.hero-meta{display:flex;justify-content:space-between;color:#c8b4aa;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding-top:8px}
+.hero-word{font:600 clamp(78px,17vw,194px)/.92 "Playfair Display",serif;letter-spacing:-.075em;color:var(--cream);text-align:center;white-space:nowrap;margin:12px 0 0}
+.hero-grid{display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:end;gap:22px;margin-top:-5px;min-height:300px}
+.hero-copy{z-index:2;padding-bottom:10px}.hero-copy h1{font-size:16px;line-height:1.35;letter-spacing:1px;text-transform:uppercase;font-weight:500}.hero-copy p,.hero-about{font-size:11px;color:var(--muted);max-width:220px}
+.portrait{height:340px;max-width:390px;width:100%;justify-self:center;align-self:end;position:relative;background:linear-gradient(0deg,#100d0e 0%,transparent 25%),url("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=85") center 25%/cover no-repeat;filter:saturate(.55);border-radius:48% 48% 0 0;mix-blend-mode:screen}
+.hero-about{justify-self:end;align-self:center;line-height:1.8}.signature{font:italic 28px "Playfair Display";color:var(--rose);margin-top:18px}.pill{display:inline-block;border:1px solid #76505a;border-radius:30px;padding:8px 14px;font-size:9px;letter-spacing:1px;text-transform:uppercase;margin-top:10px}
+.section{border-bottom:1px solid var(--line);padding:22px 0}.section-title{display:flex;align-items:center;justify-content:space-between;color:var(--cream);font-size:11px;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:17px}.star{color:var(--rose)}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.project{padding:15px;border-right:1px solid var(--line);min-width:0}.project:last-child{border:0}.project-top{display:flex;gap:12px;align-items:baseline}.num{font:22px "Playfair Display";color:var(--cream)}.project h3{font-size:12px;font-weight:500;margin:0;letter-spacing:.4px}.project small{color:var(--muted);font-size:9px}.project-image{height:145px;margin:13px 0;background-size:cover;background-position:center;filter:saturate(.7);position:relative}.project-image:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#1a1012aa,transparent)}.img-one{background-image:url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=85")}.img-two{background-image:url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=85")}.img-three{background:linear-gradient(135deg,#4a242c,#171314 60%,#8c4a58);display:grid;place-items:center;color:#e9d7ca;font:26px "Playfair Display"}.tags{display:flex;gap:5px;flex-wrap:wrap}.tag{font-size:8px;text-transform:uppercase;color:#d7c5bc;background:#261b1d;padding:5px 8px;border:1px solid #3b292d}
+.two-col{display:grid;grid-template-columns:1.1fr .9fr}.process{padding-right:28px;border-right:1px solid var(--line)}.tools{padding-left:25px}.steps{display:grid;grid-template-columns:32px 1fr;gap:10px;margin:10px 0}.steps b{font:22px "Playfair Display";color:var(--cream)}.steps strong{font-size:10px;text-transform:uppercase;letter-spacing:.8px}.steps p{font-size:10px;color:var(--muted);margin:0}.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.tool{background:var(--panel2);padding:12px 10px;font-size:10px;letter-spacing:.4px}.tool i{font-style:normal;color:var(--rose);margin-right:9px;font-weight:700}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.about-grid p{font-size:12px;color:var(--muted)}.education{padding:20px;background:var(--panel2);border:1px solid var(--line)}.education h3{font:23px "Playfair Display";color:var(--cream);margin:0 0 7px}.education p{font-size:11px;margin:4px 0}
+.focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.focus{padding:17px;background:var(--panel2);border:1px solid var(--line)}.focus b{font:22px "Playfair Display";color:var(--rose)}.focus h3{font-size:11px;letter-spacing:.8px;text-transform:uppercase}.focus p{font-size:10px;color:var(--muted);margin:0}
+.contact{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:22px;align-items:center}.contact h2{font:32px/1.12 "Playfair Display";color:var(--cream);margin:0}.contact h2 em{color:var(--rose)}.contact p{font-size:11px;color:var(--muted)}.contact-links{display:grid;gap:10px;font-size:10px;color:var(--muted);overflow-wrap:anywhere}.btn{display:inline-block;border:1px solid #8d5964;border-radius:25px;padding:9px 15px;font-size:9px;text-transform:uppercase;letter-spacing:1px;margin-top:8px}.btn:hover{background:#6f3542}
+footer{text-align:center;background:#321b20;color:#d8b8b2;padding:13px;font-size:9px;letter-spacing:2px;text-transform:uppercase}
+@media(max-width:720px){.wrap{width:calc(100% - 28px)}header{height:auto;padding:17px 0;align-items:flex-start;gap:12px}nav{gap:10px;justify-content:flex-end;flex-wrap:wrap}.hero-word{font-size:17vw;letter-spacing:-.07em}.hero-grid{grid-template-columns:1fr 1fr;min-height:0;margin-top:0}.portrait{grid-column:1/-1;grid-row:1;height:290px;width:75%}.hero-copy{grid-column:1;grid-row:2}.hero-about{grid-column:2;grid-row:2}.projects{grid-template-columns:1fr}.project{border-right:0;border-bottom:1px solid var(--line)}.project:last-child{border-bottom:0}.project-image{height:185px}.two-col,.about-grid,.contact{grid-template-columns:1fr}.process{border-right:0;border-bottom:1px solid var(--line);padding:0 0 22px}.tools{padding:22px 0 0}.focus-grid{grid-template-columns:1fr}.contact h2{font-size:29px}}
+@media(max-width:430px){header{display:block}nav{justify-content:flex-start;margin-top:12px}.hero-meta{font-size:8px}.hero-word{font-size:16vw}.hero-grid{grid-template-columns:1fr}.portrait{grid-column:1;width:90%;height:270px}.hero-copy,.hero-about{grid-column:1;grid-row:auto;justify-self:start}.hero-about{margin-top:5px}.signature{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <header class="wrap"><span>Wahab / Web Designer</span><nav><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></nav></header>
+  <div class="wrap">
+    <div class="hero-meta"><span>UI / Web Design Learner</span><span>Creative Portfolio</span></div>
+    <div class="hero-word">PORTFOLIO</div>
+    <div class="hero-grid">
+      <div class="hero-copy"><h1>I design digital<br>experiences that<br>connect ideas</h1><p>Learning to build clean, modern and useful websites with creativity and care.</p><a class="pill" href="#contact">Open to ideas & projects ✦</a><div class="signature">Wahab</div></div>
+      <div class="portrait" role="img" aria-label="Replace this sample portrait with your own photo"></div>
+      <div class="hero-about">I'm Wahab, a student and aspiring Web Designer from Kot Samaba, Pakistan. I enjoy learning HTML, CSS and modern web design to turn ideas into websites.</div>
+    </div>
+  </div>
+</div>
+<main class="wrap">
+  <section class="section" id="projects">
+    <div class="section-title"><span>Selected Projects <span class="star">✦</span></span><span>My learning journey →</span></div>
+    <div class="projects">
+      <article class="project"><div class="project-top"><span class="num">01</span><div><h3>PERSONAL PORTFOLIO</h3><small>Personal website</small></div></div><div class="project-image img-one"></div><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Web design</span></div></article>
+      <article class="project"><div class="project-top"><span class="num">02</span><div><h3>WEB DESIGNING</h3><small>Creative practice</small></div></div><div class="project-image img-two"></div><div class="tags"><span class="tag">UI design</span><span class="tag">Layout</span><span class="tag">Creative</span></div></article>
+      <article class="project"><div class="project-top"><span class="num">03</span><div><h3>NEXT PROJECT</h3><small>Coming soon</small></div></div><div class="project-image img-three">Coming Soon</div><div class="tags"><span class="tag">Learning</span><span class="tag">In progress</span></div></article>
+    </div>
+    <p style="font-size:9px;color:var(--muted);margin:10px 0 0">Project images are sample previews. Replace them with screenshots of your own work as you complete new projects.</p>
+  </section>
+  <section class="section two-col">
+    <div class="process"><div class="section-title">My Process <span class="star">✦</span></div>
+      <div class="steps"><b>01</b><div><strong>Discover</strong><p>Understand the idea, audience and purpose.</p></div></div>
+      <div class="steps"><b>02</b><div><strong>Plan</strong><p>Organize content and create a clear structure.</p></div></div>
+      <div class="steps"><b>03</b><div><strong>Design</strong><p>Choose colors, typography and a clean layout.</p></div></div>
+      <div class="steps"><b>04</b><div><strong>Build</strong><p>Develop pages using HTML and CSS.</p></div></div>
+      <div class="steps"><b>05</b><div><strong>Improve</strong><p>Test, learn and make the website responsive.</p></div></div>
+    </div>
+    <div class="tools" id="skills"><div class="section-title">Tools I Use <span class="star">✦</span></div>
+      <div class="tool-grid"><div class="tool"><i>✳</i>HTML</div><div class="tool"><i>✳</i>CSS</div><div class="tool"><i>✳</i>Web Designing</div><div class="tool"><i>✳</i>Website Development</div><div class="tool"><i>✳</i>Computer Skills</div><div class="tool"><i>✳</i>Technology</div></div>
+      <p style="font-size:9px;color:var(--muted);letter-spacing:1px;margin-top:15px">ALWAYS LEARNING ✦</p>
+    </div>
+  </section>
+  <section class="section" id="about">
+    <div class="section-title">About Me <span class="star">✦</span></div>
+    <div class="about-grid"><div><h2 style="font:30px 'Playfair Display';color:var(--cream);margin:0">Curious mind.<br>Creative learner.</h2><p>Assalam-o-Alaikum! My name is Wahab. I live in Kot Samaba, Pakistan. I have completed my Matric education in the Science Group. I am interested in Web Designing, HTML, CSS and Computer Technology. My dream is to become a successful Web Designer and Developer.</p></div>
+      <div class="education" id="education"><h3>Matric — Science Group</h3><p>Education: Matric Completed</p><p>Group: Science</p><p>Location: Kot Samaba, Pakistan</p></div>
+    </div>
+  </section>
+  <section class="section"><div class="section-title">My Focus <span class="star">✦</span></div><div class="focus-grid">
+    <div class="focus"><b>01</b><h3>Keep Learning</h3><p>Build my knowledge of web design and development step by step.</p></div>
+    <div class="focus"><b>02</b><h3>Creative Ideas</h3><p>Explore modern layouts, colors and useful website experiences.</p></div>
+    <div class="focus"><b>03</b><h3>Build & Improve</h3><p>Practice by creating websites and improving each project.</p></div>
+  </div></section>
+  <section class="section contact" id="contact">
+    <div><h2>LET'S CREATE<br>SOMETHING <em>Great.</em></h2></div>
+    <div><strong style="font-size:10px;letter-spacing:1px">LET'S CONNECT</strong><p>Have an idea or want to talk about web design? Send me a message.</p><a class="btn" href="mailto:your-email@gmail.com">Send me a message ✦</a></div>
+    <div class="contact-links"><a href="mailto:your-email@gmail.com">✉ &nbsp; your-email@gmail.com</a><span>◎ &nbsp; Add your Instagram link</span><span>⌖ &nbsp; Kot Samaba, Pakistan</span></div>
+  </section>
+</main>
+<footer>Thank you for visiting ✦ &nbsp; © 2026 Wahab Portfolio</footer>
+</body>
+</html>
